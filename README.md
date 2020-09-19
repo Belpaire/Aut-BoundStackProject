@@ -1,2 +1,2 @@
 # Aut-BoundStackProject
-Thesis code in a more structured stack project. After running stack build you should be able to just easily use the resulting executable. Note that it requires hfmt (from stylish-haskell) to be in your path or working directory to work though. So make sure wherever the hfmt.exe is installed is in the path.
+Thesis code in a more structured stack project. After running stack build the required stuff should be installed by default. Note that the main executable is not very interesting to use so a better way is to just use stack ghci and run the different functions defined in app/Main.hs.
