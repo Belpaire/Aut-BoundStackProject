@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 15796e58b63086f2baee1f5736d5a81f428dfd6e8aa1745214ecc872cf3197fb
+
+name:           autbound
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/autbound#readme>
+homepage:       https://github.com/githubuser/autbound#readme
+bug-reports:    https://github.com/githubuser/autbound/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/autbound
+
+library
+  exposed-modules:
+      MyParser
+      ToHaskellPrint
+      GeneralTerms
+  other-modules:
+      Paths_autbound
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , parsec
+    , prettyprinter
+    , process
+  default-language: Haskell2010
+
+executable autbound-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_autbound
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      autbound
+    , base >=4.7 && <5
+    , containers
+    , parsec
+    , prettyprinter
+    , process
+  default-language: Haskell2010
+
+test-suite tests
+  type: exitcode-stdio-1.0
+  main-is: myParserTest.hs
+  other-modules:
+      Paths_autbound
+  hs-source-dirs:
+      tests
+  build-depends:
+      HUnit
+    , autbound
+    , base >=4.7 && <5
+    , containers
+    , parsec
+    , prettyprinter
+    , process
+  default-language: Haskell2010
